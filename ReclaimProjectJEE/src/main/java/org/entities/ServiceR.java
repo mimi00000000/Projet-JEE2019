@@ -4,17 +4,20 @@ import java.io.Serializable;
 import java.util.Collection;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 @Entity
-public class Service  implements Serializable {
+public class ServiceR  implements Serializable {
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long numberService;
 	
 	private String nomService;
@@ -27,11 +30,11 @@ public class Service  implements Serializable {
 	
 	
 		
-	public Service() {
+	public ServiceR() {
 		super();
 	}
 
-	public Service(String nomService, String emailService, String adresseService, String numTeleService) {
+	public ServiceR(String nomService, String emailService, String adresseService, String numTeleService) {
 		super();
 		this.nomService = nomService;
 		this.emailService = emailService;

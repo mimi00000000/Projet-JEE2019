@@ -39,7 +39,7 @@ public class Reclamation implements Serializable{
 	
 	@ManyToMany
 	@JoinTable(name="Recalamation_Services")
-	private Collection<Service> services;
+	private Collection<ServiceR> services;
 	
 	
 	
@@ -121,10 +121,10 @@ public class Reclamation implements Serializable{
 		this.reclamant = reclamant;
 	}
 	
-	public Collection<Service> getServices() {
+	public Collection<ServiceR> getServices() {
 		return services;
 	}
-	public void setServices(Collection<Service> Services) {
+	public void setServices(Collection<ServiceR> Services) {
 		this.services = services;
 	}
 	public String getNomRisque() {
