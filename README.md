@@ -67,6 +67,15 @@ Modèle Vue Contrôleur (MVC) : C'est un modèle de conception qui entre en imag
 
 Spring Boot: back end framework, Angular 4: front end framework using typescript, Maven.
 
-Creating Your First Angular 4 App Using Eclipse IDE
 
+
+
+
+
+
+Creating Your First Angular 4 App Using Eclipse IDE
 https://www.genuitec.com/creating-first-angular-4-app-using-angular-ide/
+Integrate Angular with Spring Boot RESTful API tuto
+https://www.evoketechnologies.com/blog/integrate-angular-spring-boot-restful-api/
+https://www.devglan.com/spring-boot/spring-boot-angular-example
+https://www.devglan.com/angular/angular-7-crud-example
