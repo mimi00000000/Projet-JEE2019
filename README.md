@@ -66,3 +66,7 @@ MVC Design Pattern:
 Modèle Vue Contrôleur (MVC) : C'est un modèle de conception qui entre en image lorsque nous utilisons le framework Spring pour la programmation Web. Spring MVC est connu pour être une implémentation légère, car les contrôleurs sont des POJO par rapport aux servlets classiques, ce qui rend le test des contrôleurs très complet. Un contrôleur renvoie un nom de vue logique et la sélection de vue à l'aide d'un ViewResolver séparé. Par conséquent, les contrôleurs Spring MVC peuvent être utilisés avec différentes technologies d'affichage telles que JSP, etc.
 
 Spring Boot: back end framework, Angular 4: front end framework using typescript, Maven.
+
+Creating Your First Angular 4 App Using Eclipse IDE
+
+https://www.genuitec.com/creating-first-angular-4-app-using-angular-ide/
