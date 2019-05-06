@@ -3,6 +3,7 @@ package org.Metier;
 import java.util.List;
 
 import org.dao.CompteUserRepository;
+import org.dao.CompteVerificationPepository;
 import org.entities.CompteUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,11 +14,17 @@ public class CompteUserMetierImpl implements CompteUserMetier{
 	@Autowired
 	private CompteUserRepository compteUserRepository;
 
+	@Autowired
+	private CompteVerificationPepository compteVerificationRepository;
 
 	@Override
 	public CompteUser saveCompteUser(CompteUser cu) {
 		// TODO Auto-generated method stub
-		return compteUserRepository.save(cu);
+		if(compteVerificationRepository.getOne(cu.getCinU()) != null) {
+			return compteUserRepository.save(cu);
+		} else {
+			return null;
+		}
 	}
 
 	@Override

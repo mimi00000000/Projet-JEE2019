@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class indexController {
-	@RequestMapping("/index")
+	@RequestMapping("/api/index")
 	@ResponseBody
 	public String getIndexPage() {		
 		return "hello";
