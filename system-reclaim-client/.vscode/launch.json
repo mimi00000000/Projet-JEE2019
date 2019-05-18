@@ -1,0 +1,131 @@
+// Use IntelliSense to learn about possible attributes.
+// Hover to view descriptions of existing attributes.
+// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9258
+        },
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server (1)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9239
+        },
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server (2)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9240
+        },
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server (3)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9295
+        },
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server (4)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9266
+        },
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server (5)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9259
+        },
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server (6)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9209
+        },
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server (7)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9259
+        },
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server (8)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9271
+        },
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server (9)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9254
+        },
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server (10)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9253
+        }
+    ]
+}{
+  "name": "Launch Chrome system-reclaim-client on Angular CLI Server (10)",
+  "type": "chrome",
+  "request": "launch",
+  "url": "http://localhost:4200/#",
+  "webRoot": "${workspaceFolder}",
+  "port": 9253
+}]
+}         "port": 9209
+        },
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server (7)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9259
+        },
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server (8)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9271
+        },
+        {
+            "name": "Launch Chrome system-reclaim-client on Angular CLI Server (9)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9254
+        }
+    ]
+}

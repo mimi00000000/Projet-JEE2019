@@ -5,6 +5,7 @@ import java.util.List;
 import org.Metier.RisqueMetier;
 import org.entities.Risque;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -28,7 +29,7 @@ public class RisqueRestService {
 	}
 
 	@RequestMapping(value="/risques/{nomRisque}", method=RequestMethod.GET)
-	public Risque getRisqueByCode(String nomRisque) {
+	public Risque getRisqueByCode(@PathVariable String nomRisque) {
 		return risqueMetier.getRisqueByCode(nomRisque);
 	}
 

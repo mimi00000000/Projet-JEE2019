@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthentificationService } from '../authentification.service';
 
 @Component({
   selector: 'app-login',
@@ -7,27 +9,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  cin: string;
-  motdepasse: string;
+    cin: string;
+    motdepasse: string;
+    invalidLogin:boolean;
 
-  constructor() {
+  constructor(private router: Router,private loginservice: AuthentificationService) {
       this.cin = '';
       this.motdepasse = '';
+      this.invalidLogin = false;
   }
 
   ngOnInit() {
   }
 
-   loginfunc() {
-    if (this.cin === 'JB333333') {
-      if (this.motdepasse === 'jb333333') {
-        console.log('Bienvenue');
-      } else {
-        console.log('Cin incorrect');
-      }
-    } else {
-      console.log('Mot de passe incorrect');
-    }
+  loginfunc() {
+    if (this.loginservice.authenticate(this.cin, this.motdepasse)
+    ) {
+      this.router.navigate(['profil'])
+      this.invalidLogin = false
+    } else 
+      this.invalidLogin = true
   }
-  
+
 }
+
+
+
+
+
+/****************************************************************** */
+/*export class LoginComponent implements OnInit {
+  user: Object;
+  cin: string;
+  motdepasse: string;
+
+  constructor(private data: AuthentificationService) {
+      this.cin = '';
+      this.motdepasse = '';
+  }
+
+  ngOnInit() {
+        this.data.getUsers().subscribe(
+      data => this.user = data
+    );
+  }
+
+   loginfunc() {
+    return this.data.loginfuncService(this.cin, this.motdepasse);
+  }
+
+}*/

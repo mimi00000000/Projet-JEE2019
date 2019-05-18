@@ -1,1 +1,80 @@
+        <section class="hero"> 
+           <header> 
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">    
+               <a class="navbar-brand" [routerLink]="['/accueil']" routerLinkActive="router-link-active">Accueil<img src="assets/logor.png" alt="line" style="width: 20%;"></a>       
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+                   <span><i class="fa fa-home" aria-hidden="true"></i></span> 
+               </button>    
+               <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+                   <ul class="navbar-nav" style="margin-left:auto">             
+                   <li> 
+                   
+                    <form  class="form-inline my-2 my-lg-0"  action = "" method = ""> 
+                    <input class="form-control mr-sm-2" type="text" id="associ" name="associ"/> 
+                       
+                       <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name ="action" value = "recherche">
+                       <i class="fa fa-search" aria-hidden="true"></i> 
+                       Recherche</button> 
+                       
+                                     
+                   </form> 
+                   
+                   </li>         
+                   <li class="nav-item"> 
+                           <a *ngIf="!LoginService.isUserLoggedIn()" class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active">Log in</a> 
+                       </li>   
+                       <li class="nav-item"> 
+                           <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active" >Warnings</a> 
+                       </li>               
+                       <li class="nav-item"> 
+                           <a *ngIf="LoginService.isUserLoggedIn()" class="nav-link" [routerLink]="['/profil']" routerLinkActive="router-link-active">Statistics</a> 
+                       </li>       
+                       <li class="nav-item"> 
+                           <a *ngIf="!LoginService.isUserLoggedIn()" class="nav-link" [routerLink]="['/signup']" routerLinkActive="router-link-active" >Sign up</a> 
+                       </li>           
+                       <li class="nav-item"> 
+                           <a *ngIf="LoginService.isUserLoggedIn()" class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" >Log out</a> 
+                       </li>                                     
+                       <li class="nav-item"> 
+                           <a class="nav-link" [routerLink]="['/index']" routerLinkActive="router-link-active" >Contact us</a> 
+                       </li>                              
+                   </ul>   
+               </div>                              
+           </nav> 
+           </header> 		
+       </section>        
+
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+
+
+<!--
+
+    <div class="container">
+    <div>
+         <button class="btn btn-lg btn-primary" [routerLink]="['/index']" routerLinkActive="router-link-active">
+            Accueil
+        </button>
+        <button class="btn btn-lg btn-primary" [routerLink]="['/login']" routerLinkActive="router-link-active">
+            Login
+        </button>
+         <button class="btn btn-lg btn-primary" [routerLink]="['/signup']" routerLinkActive="router-link-active" >
+            Sign Up
+        </button>
+         <button class="btn btn-lg btn-primary" [routerLink]="['/profil']" routerLinkActive="router-link-active" >
+            Profile
+        </button>
+    </div>
+    
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
 <app-login></app-login>
+<app-profil></app-profil>
+<app-signup></app-signup>
+-->

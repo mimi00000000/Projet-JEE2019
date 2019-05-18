@@ -38,7 +38,7 @@ public class Personne {
 	}
 
 	public Personne(String cin, String nom, String prenom, String email, String adresse, Date dateNaissance,
-			String numTele, String sexe) {
+			String numTele, String sexe, Ville ville) {
 		super();
 		this.cin = cin;
 		this.nom = nom;
@@ -48,6 +48,7 @@ public class Personne {
 		this.dateNaissance = dateNaissance;
 		this.numTele = numTele;
 		this.sexe = sexe;
+		this.ville = ville;
 	}
 	
 	public String getCin() {
