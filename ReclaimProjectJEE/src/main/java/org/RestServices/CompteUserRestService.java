@@ -20,14 +20,14 @@ public class CompteUserRestService {
 	private CompteUserMetier compteUserMetier;
 
 	@RequestMapping(value="/comptes", method=RequestMethod.POST)
-//	@CrossOrigin("http://localhost:4200")
+	@CrossOrigin("http://localhost:4200")
 	@ResponseBody
 	public CompteUser saveCompteUser(CompteUser cu) {
 		return compteUserMetier.saveCompteUser(cu);
 	}
 
 	@RequestMapping(value="/comptes", method=RequestMethod.GET)
-	//@CrossOrigin("http://localhost:4200")
+	@CrossOrigin("http://localhost:4200")
 	public List<CompteUser> listCompteUsers() {
 		return compteUserMetier.listCompteUsers();
 	}

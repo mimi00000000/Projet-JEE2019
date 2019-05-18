@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin("http://localhost:4200")
 public class PersonneRestService {
-	
+	 
 	@Autowired
 	private PersonneMetier personneMetier;
 

@@ -11,3 +11,5 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 public interface CompteUserRepository extends JpaRepository<CompteUser, String> {
 
 }
+
+

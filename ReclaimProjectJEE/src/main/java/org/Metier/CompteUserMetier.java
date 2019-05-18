@@ -10,4 +10,5 @@ public interface CompteUserMetier {
 	public CompteUser saveCompteUser(CompteUser cu);
 	public List<CompteUser> listCompteUsers();
 	public CompteUser getCompteUserByCode(String cin);
+	
 }

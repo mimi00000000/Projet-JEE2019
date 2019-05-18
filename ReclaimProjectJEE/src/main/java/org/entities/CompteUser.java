@@ -11,6 +11,8 @@ public class CompteUser implements Serializable {
 	/**
 	 * 
 	 */
+	
+	
 	private static final long serialVersionUID = 1L;
 	@Id
 	private String cinU;
