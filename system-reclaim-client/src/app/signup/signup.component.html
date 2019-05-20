@@ -1,4 +1,5 @@
 <div class="container-fluid bg-light py-3 center-div">
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm">
     <div class="row">
         <div class="col-md-8 mx-auto">
                 <div class="card card-body">
@@ -11,35 +12,35 @@
                              <div class="row">	
                                  <div class="col-6">
                                                     <div class="form-group">
-                                                        <input class="form-control input-lg" placeholder="First Name" name="fname" type="text">
+                                                        <input class="form-control input-lg" [(ngModel)]="user.prenom" placeholder="First Name" name="fname" type="text">
                                                     </div>
                                                     <div class="form-group">
-                                                            <input class="form-control input-lg" placeholder="Last Name" name="lname" type="text">
+                                                            <input class="form-control input-lg" [(ngModel)]="user.nom" placeholder="Last Name" name="lname" type="text">
                                                     </div>
                                                     <div class="form-group">
-                                                        <select class="form-control input-lg">
+                                                        <select [(ngModel)]="user.sexe" class="form-control input-lg">
                                                             <option selecterd="">Female</option>
                                                             <option selecterd="">Male</option>
                                                         </select>
                                                     </div>
                                                     <div class="form-group">
-                                                        <input class="form-control input-lg" placeholder="Phone Number" name="phonenumber" type="text">
+                                                        <input class="form-control input-lg" [(ngModel)]="user.numTele" placeholder="Phone Number" name="phonenumber" type="text">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="sexe">Birth Date:</label>
-                                                        <input class="form-control input-lg" placeholder="Birth Date" name="bdate" type="date">
+                                                        <input class="form-control input-lg" [(ngModel)]="user.dateNaissance" placeholder="Birth Date" name="bdate" type="date">
                                                     </div>
                                                     <div class="form-group">
-                                                        <input class="form-control input-lg" placeholder="Address" name="addresshome" type="text">
+                                                        <input class="form-control input-lg" [(ngModel)]="user.adresse" placeholder="Address" name="addresshome" type="text">
                                                     </div>
                             </div>                            
                                    
                         <div class="col-6">
                                         <div class="form-group has-error">
-                                            <input class="form-control input-lg" placeholder="CIN" name="cin" type="text">
+                                            <input class="form-control input-lg" [(ngModel)]="user.cin"  placeholder="CIN" name="cin" type="text">
                                         </div>
                                         <div class="form-group has-error">
-                                     <select class="form-control input-lg">
+                                     <select  name="pays" class="form-control input-lg">
                                                 <option value="" disabled>Country</option> 
                                                 <option value="AF">Afghanistan</option>
                                                 <option value="AX">Åland Islands</option>
@@ -295,10 +296,10 @@
                           
 
                          <div class="form-group">
-                            <input class="form-control input-lg" placeholder="City" name="city" type="text">
+                            <input class="form-control input-lg" [(ngModel)]="user.ville" placeholder="City" name="city" type="text">
                         </div>
                         <div class="form-group has-error">
-                            <input class="form-control input-lg" placeholder="E-mail Address" name="email" type="text">
+                            <input class="form-control input-lg" [(ngModel)]="user.email" placeholder="E-mail Address" name="email" type="text">
                         </div>
                         <div class="form-group has-success">
                             <input class="form-control input-lg" placeholder="Password" name="password" value="" type="password">
@@ -321,4 +322,5 @@
                 </div>
         </div>
     </div>
+    </form>
 </div>

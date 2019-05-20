@@ -1,94 +1,91 @@
-<div class="container center-div">
-<h2>Users </h2>
-<div *ngFor="let user of users">
-        {{user.cin}}
-       
-</div>
-<div class="container py-3">
-    <div class="row">
-        <div class="mx-auto col-sm-6">
-                    <!-- form user info -->                   
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="mb-0">User Information</h4>
-                        </div>
-                        <div class="card-body">
-                            <form class="form" role="form" autocomplete="off">
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">First name</label>
-                                    <div class="col-lg-9">
-                                        <input class="form-control" type="text" value="Jane">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Last name</label>
-                                    <div class="col-lg-9">
-                                        <input class="form-control" type="text" value="Bishop">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Email</label>
-                                    <div class="col-lg-9">
-                                        <input class="form-control" type="email" value="email@gmail.com">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Company</label>
-                                    <div class="col-lg-9">
-                                        <input class="form-control" type="text" value="">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Website</label>
-                                    <div class="col-lg-9">
-                                        <input class="form-control" type="url" value="">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Time Zone</label>
-                                    <div class="col-lg-9">
-                                        <select id="user_time_zone" class="form-control" size="0">
-                                            <option value="Hawaii">(GMT-10:00) Hawaii</option>
-                                            <option value="Alaska">(GMT-09:00) Alaska</option>
-                                            <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
-                                            <option value="Arizona">(GMT-07:00) Arizona</option>
-                                            <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
-                                            <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
-                                            <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
-                                            <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Username</label>
-                                    <div class="col-lg-9">
-                                        <input class="form-control" type="text" value="janeuser">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Password</label>
-                                    <div class="col-lg-9">
-                                        <input class="form-control" type="password" value="11111122333">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Confirm</label>
-                                    <div class="col-lg-9">
-                                        <input class="form-control" type="password" value="11111122333">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label"></label>
-                                    <div class="col-lg-9">
-                                        <input type="reset" class="btn btn-secondary" value="Cancel">
-                                        <input type="button" class="btn btn-primary" value="Save Changes">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<div class="container center-div">  
+    <div class="row">    
+        <div class="col-lg-6">
+      <img src="https://image.flaticon.com/icons/png/512/306/306473.png" id="icon" alt="User Icon" />
+      <br>
+             <!--  this is the previous word that was done
+              <p><strong>Nom: </strong>{{user.nom}}</p>
+              <p><strong>Prenom: </strong>{{user.prenom}}</p>
+              <p><strong>email: </strong> {{user.email}}</p>
+              <p><strong>CIN: </strong>{{user.cin}}</p>
+              <p><strong>Date de Naissance: </strong>{{user.dateNaissance}}</p>
+              <p><strong>Telephone: </strong> {{user.numTele}}</p>
+              <p><strong>Adresse: </strong> {{user.adresse}}</p>
+              -->
+
+              <!-- the new modofications : YAAAAAAAAAAAYYYY IT WORKED-->
+              <div *ngFor="let profil of profils">
+                    <p><strong>Nom: </strong>{{profil.name}}</p>
+                    <p><strong>Prenom: </strong>{{profil.prenom}}</p>
+                    <p><strong>email: </strong> {{profil.email}}</p>
+                    <p><strong>CIN: </strong>{{profil.cin}}</p>
+                    <p><strong>Date de Naissance: </strong>{{profil.dateNaissance}}</p>
+                    <p><strong>Telephone: </strong> {{profil.Telephone}}</p>
+                    <p><strong>Adresse: </strong> {{profil.Adresse}}</p>
+              </div>
+              
+            </div>
+          
+                <div class="col-lg-6">
+                <h1>Faire une reclamation  !</h1>
+
+                <form action="#" id="formul">
+
+                <div class="required toUpper">
+
+                    <div class="form-group">
                     </div>
-                    <!-- /form user info -->
-        </div>
-    </div>
+                </div>
+                <div class="required">
+                    <label for="adresse">adresse</label>
+                    <textarea required id="adresse" placeholder="obligatoire" type="text"></textarea>
+                </div>
+                <div class="required toUpper">
+                    <label for="localisation">localisation</label>
+                    <input required id="localisation" placeholder="obligatoire" type="text">
+                </div>
+                <div class="required toUpper">
+                    <label for="imvictime">immatriculation victime</label>
+                    <input id="imvictime" placeholder="optionnel">
+                </div>
+                <div class="required">
+                    <label for="imsusp">immatriculation Suspect**</label>
+                    <input id="imsusp" placeholder="optionnel" type="text">
+                </div>
+                <div class="required toUpper">
+                    <label for="date">date</label>
+                    <input type="date" id="optionnel" placeholder="">
+                </div>
+                <div class="required toUpper">
+
+                    <div class="form-group">
+
+                        <label class="radio-inline">
+                        <input type="radio" name="Accident" value="normal" />Accident
+                        </label>
+                        <label class="radio-inline">
+                        <input type="radio" name="Incident" value="normal" />Incident
+                        </label><label class="radio-inline">
+                        <input type="radio" name="Agression" value="normal" /> Agression
+                        </label>
+                    </div>
+                </div>
+                <div id="success" class="alert">
+                    Bravo, vos infos ont bien été envoyées !
+                </div>
+                <div id="error" class="alert">
+                    Des erreurs existent dans votre formulaire, merci de les corriger avant de ré-essayer l'enregistrement !
+                </div>
+                <div>
+                    <label>&nbsp;</label>
+                    <button type="submit">
+                    Diffuser
+                    </button>
+                </div>
+                </form>
+                </div>
 </div>
 </div>

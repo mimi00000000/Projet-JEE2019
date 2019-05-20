@@ -1,0 +1,53 @@
+
+
+<section>
+
+    <router-outlet></router-outlet>
+    <div id="inline">
+      <div class="two"  style ="margin-top: 130px;">
+        <button  type="button" style="display: block;  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;" (click)=ShowSuccess() >Reclamations</button>
+        <button type="button" style="display: block;  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;" (click)=ErrorSuccess()>indients</button>
+        <button type="button" style="display: block;  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;" (click)=WarningSuccess()>warnings</button>
+      </div>
+      <div class="one" style ="margin-top: 130px;">
+
+        <agm-map [latitude]="lat" [zoom]="zoom" [longitude]="lng">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+      </div>
+
+    </div>
+</section>
+
+
+

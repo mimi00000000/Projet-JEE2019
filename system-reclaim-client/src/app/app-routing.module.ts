@@ -5,6 +5,9 @@ import { ProfilComponent } from './profil/profil.component';
 import { SignupComponent } from './signup/signup.component';
 import { IndexComponent } from './index/index.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { WarningsComponent } from './warnings/warnings.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+import { MapComponent } from './map/map.component';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: 'accueil', pathMatch: 'full'},
@@ -12,7 +15,10 @@ const appRoutes: Routes = [
     {path: 'profil', component: ProfilComponent},
     {path: 'signup', component: SignupComponent},
     {path: 'index', component: IndexComponent},
-    {path: 'accueil', component: AccueilComponent}
+    {path: 'accueil', component: AccueilComponent},
+    {path: 'warnings', component: WarningsComponent },
+    {path: 'statistics', component: StatisticsComponent},
+    {path: 'map', component: MapComponent}
 ];
 
 @NgModule({

@@ -6,11 +6,17 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Risque  implements Serializable{
+public class Risque implements Serializable{
+	//jai supprime implements serializable
+	//get works when i deleted the serialiqable shit!!!
+	public Risque() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;
 	@Id
 	private String nomRisque;
 	private String descriptionRisque;

@@ -1,5 +1,6 @@
 package org.entities;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
@@ -9,8 +10,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonSetter;
+
 @Entity
-public class Personne {
+public class Personne implements Serializable{
 	
 	@Id
 	private String cin;
@@ -24,6 +28,8 @@ public class Personne {
 	
 	@OneToMany(mappedBy="reclamant")
 	private Collection<Reclamation> reclamations;
+	
+	
 
 	
 	@ManyToOne
@@ -108,10 +114,12 @@ public class Personne {
 		this.ville = ville;
 	}
 	
+	@JsonIgnore
 	public Collection<Reclamation> getReclamtions() {
 		return reclamations;
 	}
 
+	@JsonSetter
 	public void setReclamations(Ville ville) {
 		this.reclamations = reclamations;
 	}

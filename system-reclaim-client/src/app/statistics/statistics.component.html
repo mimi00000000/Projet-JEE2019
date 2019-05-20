@@ -1,0 +1,132 @@
+<div class="container center-div table-responsive text-nowrap">
+    <div class="container" *ngFor="let reclamation of reclamations">
+
+<table class="table table-bordered table-hover table-striped" >
+<thead class="thead-dark col" > 
+       
+    <tr classe="row">
+      <th class="col-4">id</th>
+       <td class="col-8">{{reclamation.nomReclamation}}</td>
+    </tr>
+    <tr classe="row">
+      <th class="col-4">Description</th>
+       <td class="col-8">{{reclamation.Description}}</td>
+    </tr>
+     <tr classe="row">
+         <th class="col-4">Type</th>
+          <td class="col-8">{{reclamation.nomRisque}}</td>
+    </tr>
+     <tr classe="row">
+         <th class="col-4">Temoins</th>
+           <td class="col-8">{{reclamation.numberPersonnes}}</td>
+    </tr>
+     <tr classe="row">
+         <th class="col-4">Date</th>
+          <td class="col-8">{{reclamation.dateReclamation}}</td>
+    </tr>
+    
+       <tr classe="row">
+         <th class="col-4">Consulter les resources</th> 
+           <td class="col-8"><a [href]=reclamation.photo>Consulter les resources</a></td>
+    </tr>
+    <tr classe="row">
+          <th class="col-4">Consulter la localisation</th>              
+      <td class="col-8"><a [href]=reclamation.localisation>Consulter la localisation</a></td>
+    </tr>
+    <tr  classe="row">
+         <th class="col-4">Matricule Victime</th> 
+          <td class="col-8">{{reclamation.matriculeVictime}}</td>
+    </tr>
+    <tr classe="row">
+         <th class="col-4">Matricule Suspect</th> 
+         <td class="col-8">{{reclamation.matriculeSuspect}}</td>
+    </tr>
+    </thead>
+</table>
+</div>
+</div>
+
+
+<!--
+    <div class="container center-div table-responsive text-nowrap">
+    <div class="container" *ngFor="let reclamation of reclamations">
+    <div class="row" style="background-color: #292b2c;color: white;font-family: 'Times New Roman', Times, serif; font-size:20px;">
+        <div class="col-4">id</div>
+        <div class="col-8">{{reclamation.nomReclamation}}</div>
+    </div>
+    <div class="row">
+        <div class="col-4">Description</div>
+        <div class="col-8">{{reclamation.Description}}</div>
+    </div>
+    <div class="row" style="background-color: #292b2c;color: white;font-family: 'Times New Roman', Times, serif; font-size:20px;">
+        <div class="col-4">Type</div>
+        <div class="col-8">{{reclamation.nomRisque}}</div>
+    </div>
+    <div class="row">
+        <div class="col-4">Temoins</div>
+        <div class="col-8">{{reclamation.numberPersonnes}}</div>
+    </div>
+    <div class="row" style="background-color: #292b2c;color: white;font-family: 'Times New Roman', Times, serif; font-size:20px;">
+        <div class="col-4">Date</div>
+        <div class="col-8">{{reclamation.dateReclamation}}</div>
+    </div>
+    <div class="row">
+        <div class="col-4">Adresse</div>
+        <div class="col-8">{{reclamation.adresse}}</div>
+    </div>
+    <div class="row" style="background-color: #292b2c;color: white; font-size:20px; font-family: 'Times New Roman', Times, serif;">
+        <div class="col-4">Consulter la localisation</div>
+        <div class="col-8"><a [href]=reclamation.localisation>Consulter la localisation</a></div>
+    </div>
+    <div class="row">
+        <div class="col-4">Matricule Victime</div>
+        <div class="col-8">{{reclamation.matriculeVictime}}</div>
+    </div>
+        <div class="row" style="background-color: #292b2c;color: white;font-family: 'Times New Roman', Times, serif; font-size:20px;">
+        <div class="col-4">Matricule Suspect</div>
+        <div class="col-8">{{reclamation.matriculeSuspect}}</div>
+    </div>
+        <div class="row">
+        <div class="col-4">Consulter les resources</div>
+        <div class="col-8"><a [href]=reclamation.photo>Consulter les resources</a></div>
+    </div>
+        <div class="row" style="background-color: #292b2c;">
+        <div class="col-4">h</div>
+        <div class="col-8">h</div>
+    </div>
+</div>
+
+
+
+<style type="text/css">
+	.TFtableCol{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.TFtableCol td{ 
+		padding:7px; border:#4e95f4 1px solid;
+	}
+	/* improve visual readability for IE8 and below */
+	.TFtableCol tr{
+		background: #b8d1f3;
+	}
+	/*  Define the background color for all the ODD table columns  */
+	.TFtableCol tr td:nth-child(odd){ 
+		background: #b8d1f3;
+	}
+	/*  Define the background color for all the EVEN table columns  */
+	.TFtableCol tr td:nth-child(even){
+		background: #dae5f4;
+	}
+</style>
+
+<table class="TFtableCol">
+	<tr><td>Text</td><td>Text</td></tr>
+	<tr><td>Text</td><td>Text</td></tr>
+	<tr><td>Text</td><td>Text</td></tr>
+	<tr><td>Text</td><td>Text</td></tr>
+</table>
+
+-->
+
+

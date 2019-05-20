@@ -6,14 +6,17 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class CompteUser implements Serializable {
+public class CompteUser implements Serializable{
+	
+	//i deleted that BIG SHIT called ! implementes Serializable : i don't know what does it do here : big shit safi :'
 	
 	/**
 	 * 
 	 */
 	
 	
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;  --> this one is needed for the Serializable thing!
+	
 	@Id
 	private String cinU;
 	private String motdepasseU;

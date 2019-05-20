@@ -1,0 +1,18 @@
+agm-map {
+  height:400px;
+  width:1000px;
+
+}
+
+#inline {
+  height: auto;
+  background-color: white;
+  display: flex;
+}
+
+.one, .two {
+  height: 100px;
+  background-color: white;
+  margin: 10px;
+}
+

@@ -14,21 +14,25 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Reclamation implements Serializable{
-	
+	//i deleted again the serializable SHIT
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
-	
+	//private static final long serialVersionUID = 1L;
+	//i added a default constructor
+	public Reclamation() {
+		super();
+	}
 	@Id
 	private String nomReclamation;
+	
 	private String Description;
 	private String nomRisque;
 	private int numberPersonnes;
 	private String localisation;
 	private String matriculeVictime;
 	private String matriculeSuspect;
-	private Blob photo;
+	private String photo;
 	private Date dateReclamation;
 	private String adresse;
 	
@@ -40,18 +44,14 @@ public class Reclamation implements Serializable{
 	@ManyToMany
 	@JoinTable(name="Recalamation_Services")
 	private Collection<ServiceR> services;
+
 	
-	
-	
-	public Reclamation() {
-		super();
-	}
-	public Reclamation(String nomRisque, String nomReclamation, String description, int numberPersonnes, String localisation,
-			String matriculeVictime, String matriculeSuspect, Blob photo, Date dateReclamation, String adresse) {
+	public Reclamation(String nomRisque, String nomReclamation, String Description, int numberPersonnes, String localisation,
+			String matriculeVictime, String matriculeSuspect, String photo, Date dateReclamation, String adresse) {
 		super();
 		this.nomRisque = nomRisque;
 		this.nomReclamation = nomReclamation;
-		Description = description;
+		this.Description = Description;
 		this.numberPersonnes = numberPersonnes;
 		this.localisation = localisation;
 		this.matriculeVictime = matriculeVictime;
@@ -69,8 +69,8 @@ public class Reclamation implements Serializable{
 	public String getDescription() {
 		return Description;
 	}
-	public void setDescription(String description) {
-		Description = description;
+	public void setDescription(String Description) {
+		this.Description = Description;
 	}
 	public int getNumberPersonnes() {
 		return numberPersonnes;
@@ -96,10 +96,10 @@ public class Reclamation implements Serializable{
 	public void setMatriculeSuspect(String matriculeSuspect) {
 		this.matriculeSuspect = matriculeSuspect;
 	}
-	public Blob getPhoto() {
+	public String getPhoto() {
 		return photo;
 	}
-	public void setPhoto(Blob photo) {
+	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
 	public Date getDateReclamation() {

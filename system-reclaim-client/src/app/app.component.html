@@ -25,17 +25,23 @@
                            <a *ngIf="!LoginService.isUserLoggedIn()" class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active">Log in</a> 
                        </li>   
                        <li class="nav-item"> 
-                           <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active" >Warnings</a> 
+                           <a class="nav-link" [routerLink]="['/warnings']" routerLinkActive="router-link-active" >Warnings</a> 
                        </li>               
                        <li class="nav-item"> 
-                           <a *ngIf="LoginService.isUserLoggedIn()" class="nav-link" [routerLink]="['/profil']" routerLinkActive="router-link-active">Statistics</a> 
+                           <a  class="nav-link" [routerLink]="['/statistics']" routerLinkActive="router-link-active">Statistics</a> 
                        </li>       
                        <li class="nav-item"> 
                            <a *ngIf="!LoginService.isUserLoggedIn()" class="nav-link" [routerLink]="['/signup']" routerLinkActive="router-link-active" >Sign up</a> 
                        </li>           
                        <li class="nav-item"> 
                            <a *ngIf="LoginService.isUserLoggedIn()" class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" >Log out</a> 
-                       </li>                                     
+                       </li>
+                       <li class="nav-item"> 
+                           <a class="nav-link" [routerLink]="['/map']" routerLinkActive="router-link-active" >Map</a> 
+                       </li>     
+                       <li class="nav-item"> 
+                           <a class="nav-link" [routerLink]="['/profil']" routerLinkActive="router-link-active" >Profil</a> 
+                       </li>                                        
                        <li class="nav-item"> 
                            <a class="nav-link" [routerLink]="['/index']" routerLinkActive="router-link-active" >Contact us</a> 
                        </li>                              

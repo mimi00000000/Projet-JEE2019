@@ -11,26 +11,43 @@ export class LoginComponent implements OnInit {
 
     cin: string;
     motdepasse: string;
-    invalidLogin:boolean;
+    invalidLogin: boolean;
 
-  constructor(private router: Router,private loginservice: AuthentificationService) {
+    login: any;
+
+
+  constructor(private router: Router, private loginservice: AuthentificationService) {
       this.cin = '';
       this.motdepasse = '';
       this.invalidLogin = false;
   }
 
   ngOnInit() {
+       
   }
 
   loginfunc() {
-    if (this.loginservice.authenticate(this.cin, this.motdepasse)
+      //normally , this is what it was written in static way :); let's change the thing to the best ; YAAAY!
+   /* if (this.loginservice.authenticate(this.cin, this.motdepasse)
     ) {
       this.router.navigate(['profil'])
       this.invalidLogin = false
     } else 
       this.invalidLogin = true
+  }*/
+//let's write a new condition here !!
+    this.loginservice.get(this.cin, this.motdepasse).subscribe(data => {
+                this.login = data;
+    });
+    if (this.login == null) {
+      this.invalidLogin = true;
+  } else {
+      this.router.navigate(['profil']);  /* it is static!! need to change the path from profil to sth more dynamic */
+      this.invalidLogin = false;
   }
 
+
+  }
 }
 
 

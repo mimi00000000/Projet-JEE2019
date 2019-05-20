@@ -1,20 +1,37 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfilService } from '../profil.service';
-
+import { User } from '../User';
+import { ProfilService } from '../profil.service'; 
 @Component({
   selector: 'app-profil',
   templateUrl: './profil.component.html',
   styleUrls: ['./profil.component.css']
 })
 export class ProfilComponent implements OnInit {
-    public users: Array<any>;
 
-  constructor(private profilService: ProfilService) { }
+    profils : Array<any>;
+   /* public user: User;
+    ngOnInit(): void {
+    }
+  constructor() {
+      this.user = {
+                cin: 'kherra',
+                nom: 'kherra',
+                prenom: 'kherra',
+                email: 'kherra',
+                adresse: 'kherra',
+                dateNaissance: new Date(),
+                numTele: 'kherra',
+                sexe: 'kherra',
+                ville: 'kherra'
+      };
 
-  ngOnInit() {
+  }*/
+
+  //what i added here ,n just in case ...
+  constructor(private profilService: ProfilService){}
+  ngOnInit(): void {
       this.profilService.getAll().subscribe(data => {
-            this.users = data;
+          this.profils = data;
       });
-  }
-
+    }
 }

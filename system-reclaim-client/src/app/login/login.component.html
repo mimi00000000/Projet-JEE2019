@@ -15,8 +15,14 @@
     <br>
     <!-- Login Form -->
     <form>
-      <input type="text" [(ngModel)]="cin" id="cin" class="fadeIn second" name="cin" placeholder="CIN">
-      <input type="password" [(ngModel)]="motdepasse" id="motdepasse" class="fadeIn third" name="motdepasse" placeholder="Mot de passe">
+        <!--
+            the previous static SHIT was like this : 
+            <input type="text" [(ngModel)]="cin" id="cin" class="fadeIn second" name="cin" placeholder="CIN">
+             <input type="password" [(ngModel)]="motdepasse" id="motdepasse" class="fadeIn third" name="motdepasse" placeholder="Mot de passe">
+        -->
+        <!-- Now the dynamic magic! let's if it will work-->
+      <input type="text" [(ngModel)]="login.cin" id="cin" class="fadeIn second" name="cin" placeholder="CIN">
+      <input type="password" [(ngModel)]="login.motdepasse" id="motdepasse" class="fadeIn third" name="motdepasse" placeholder="Mot de passe">
       <input type="submit" class="fadeIn fourth" value="Log In" (click)="loginfunc()">
     </form>
     <!-- Remind Passowrd -->
